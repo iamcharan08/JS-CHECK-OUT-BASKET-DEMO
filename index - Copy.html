@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Your Basket Example</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+	</script>
+	<![endif]-->
+
+	<!-- Internet Explorer 8 or older versions doesn't support CSS3 media queries. I enable it by importing css3-mediaqueries.js Javascript file. -->
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->  
+
+	<!-- importing jquery library -->
+	<script src="./js/jquery-1.11.2.min.js" ></script>
+
+	<!-- importing custom script file -->
+	<script src="./js/function.js" ></script> 
+
+	<!-- importing custom css -->
+    <link rel="stylesheet" href="./css/style.css"/>
+    
+    <!-- importing google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
+
+</head>
+<body>
+  <div id="wrapper">
+
+	<section id="heading" class="layout">	
+		<header class="title">
+		  <h1>Your Basket</h1>
+		  <p>Items you have added to your basket are shown below.</p>
+		  <p>Adjust the quantities or remove items before continuing your purchase.</p>
+		</header>
+	</section>
+
+	<section id="content" class="layout">
+	   <form action="" name="basketForm" id="basketDataForm" method="post" autocomplete="off"> 
+		 <div id="validationBox"></div>
+		 <table border="1" class="itemsContainer">
+	      <thead>
+	      	<tr class="desc">
+	      		<th>Product</th>
+	      		<th>Price</th>
+	      		<th>Qty</th>
+	      		<th></th>
+	      		<th>Cost</th>
+	      		<th></th>
+	      	</tr>
+	      </thead>
+	
+	      <tbody>
+	      	 <tr class="emptyRowTop"></tr>
+
+	         <tr class="odd row item">
+	         	<td class="product">Cotton T-Shirt, Medium</td>
+	         	<td class="price">£1.99</td>
+	         	<td class="quantity"><input title="Enter number of product quantity" class="inputQuantity" type="text" value="1" autocomplete='off'/></td>
+	         	<td class="addRemove"><div class="add"></div><div class="delete"></div></td>
+	         	<td class="cost">£1.99</td>
+	         	<td class="deleteIcon"><div class="remove"></div></td>
+	         </tr>
+	         <tr class="even row item">
+	         	<td class="product">Baseball Cap, One Size</td>
+	         	<td class="price">£2.99</td>
+	         	<td class="quantity"><input title="Enter number of product quantity" class="inputQuantity" type="text" value="1" autocomplete='off'/></td>
+	         	<td class="addRemove"><div class="add"></div><div class="delete"></div></td>
+	         	<td class="cost">£2.99</td>
+	         	<td class="deleteIcon"><div class="remove"></div></td>
+	         </tr>
+	         <tr class="odd row item">
+	         	<td class="product">Swim Shorts, Medium</td>
+	         	<td class="price">£3.99</td>
+	         	<td class="quantity"><input title="Enter number of product quantity" class="inputQuantity" type="text" value="1" autocomplete='off'/></td>
+	         	<td class="addRemove"><div class="add"></div><div class="delete"></div></td>
+	         	<td class="cost">£3.99</td>
+	         	<td class="deleteIcon"><div class="remove"></div></td>
+	         </tr>
+
+	         <tr class="emptyRow"></tr>
+
+	         <tr class="subTotal row">
+	         	<td class="product subtotal">Subtotal</td>
+	         	<td class="price"></td>
+	         	<td class="quantity"></td>
+	         	<td class="addRemove"></td>
+	         	<td class="cost">£8.97</td>
+	         	<td class="deleteIcon"></td>
+	         </tr>
+	         <tr class="vat row">
+	         	<td class="product vat">VAT @20%</td>
+	         	<td class="price"></td>
+	         	<td class="quantity"></td>
+	         	<td class="addRemove"></td>
+	         	<td class="cost">£1.79</td>
+	         	<td class="deleteIcon"></td>
+	         </tr>
+	       </tbody>
+	       <tfoot>
+		    	<tr class="totalCost row">
+		         	<td class="product totalCost">Total Cost</td>
+		         	<td class="price"></td>
+		         	<td class="quantity"></td>
+		         	<td class="addRemove"></td>
+		         	<td class="cost">£10.76</td>
+		         	<td class="deleteIcon"></td>
+	         	</tr>
+		    </tfoot>
+	     </table>
+	      
+		 <table border="1" class="buttonContainer">   
+	   	   <tbody>
+	      	 <tr class="emptyRowTop"></tr>
+	         <tr class="odd row">
+	         	<td class="product"></td>
+	         	<td class="price"></td>
+	         	<td class="quantity"></td>
+	         	<td class="cost"></td>
+	         	<td class="buyNow"><input class="buyNowButton" type="image" src="./images/cta_buynow.gif" alt="Submit basket"/></td>	        
+	         	<td class="deleteIcon"></td>
+	         </tr>
+	       </tbody>
+	     </table>
+
+	    </form>
+	</section>
+
+	<footer>
+		<div class="footer"><p class="footerCopy">&#169;Good stuff here</p></div>
+	</footer>
+</div>
+
+</body>
+</html> 

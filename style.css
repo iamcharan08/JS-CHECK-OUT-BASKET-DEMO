@@ -1,0 +1,536 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html{
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+body {
+  padding:0;
+  margin:0;
+  height:100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, u {
+    text-decoration: none;
+    color:#606768;
+}
+
+a {
+  outline : none;
+}
+
+a img {
+  outline : none;
+}
+
+img {
+  border : 0;
+}
+
+a:hover {
+  cursor:pointer;
+  color: #e9474b;
+  
+  -webkit-transition: color 0.4s ease,text-decoration 0.4s ease ;
+  -moz-transition: color 0.4s ease,text-decoration 0.4s ease ;
+  -o-transition: color 0.4s ease,text-decoration 0.4s ease ;
+  -ms-transition: color 0.4s ease,text-decoration 0.4s ease ;
+  transition: color 0.4s ease, text-decoration 0.4s ease ;
+}
+
+#wrapper {
+   width: 100%;
+   min-height:100%;
+   position:relative;
+
+   /* fallback */
+  background-color: #dadada;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      color-stop(0.18, rgb(255-255-255)),
+      color-stop(0.87, rgb(218,218,218))
+  );
+  background: -moz-linear-gradient(top, #ffffff 0%, #dadada 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dadada)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%,#dadada 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%,#dadada 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%,#dadada 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dadada',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #ffffff 0%,#dadada 100%); /* W3C */
+}
+
+.layout{
+  max-width: 960px; /* standard 1024px wide */
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+}
+
+.header a.logo{
+  background: url("../images/logo.jpg") no-repeat;
+  display: block;
+  height: 48px;
+  width: 101px;
+}
+
+.remove{
+  background: url("../images/delete_img.png") no-repeat;
+  display: block;
+  height: 25px;
+  width: 22px;
+  cursor: pointer;
+}
+
+.add, .delete{
+  height: 16px;
+  width: 14px;
+  cursor: pointer;
+}
+
+.add{
+  background: url("../images/add_button.gif") no-repeat;
+}
+
+.delete{
+  background: url("../images/remove_button.gif") no-repeat;
+}
+
+input.buyNowButton{
+  display: block;
+  height: 57px;
+  width: 129px;
+}
+
+table.itemsContainer {
+  width: 100%;
+}
+
+table.itemsSummaryContainer {
+  width: 70%;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: middle;
+}
+
+.row td {
+  font-family: 'Droid Serif', sans-serif, Arial;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0 5px 0 15px;
+}
+
+tr.desc {
+  font-family: 'Droid Serif', sans-serif, Arial;
+  font-size: 18px;
+  font-weight: 700;
+  height: 23px;
+}
+
+tr.row{
+  height: 50px;
+}
+
+.desc th{
+  border-bottom: 2px solid #999999;
+  padding: 0 5px 0 15px;
+}
+
+.desc th:last-child {
+ border: 0;
+}
+
+.desc th:nth-child(3)  {
+ text-align: right;
+}
+
+tr.even {
+  background: #dddddd;
+}
+
+td.quantity input {
+  border: 1px solid #999999;
+  height: 28px;
+  text-align:right; 
+  font-family: 'Droid Serif', sans-serif, Arial;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+td.product{
+  width: 250px;
+}
+
+td.price{
+  width: 40px;
+}
+
+td.quantity{
+  width: 50px;
+  text-align: right;
+}
+
+td.addRemove{
+  width: 20px;
+  padding-left: 3px;
+}
+
+td.cost{
+  width: 60px;
+}
+
+td.deleteIcon{
+  width: 25px;
+}
+
+td.buyNow{
+  text-align: right;
+  width: 1%;
+  padding-left: 3px;
+}
+
+tr.subTotal, tr.vat{
+  height:25px;
+  color: #666666;
+}
+
+tr.emptyRow{
+  height: 30px;
+}
+
+tr.emptyRowTop{
+  height: 10px;
+}
+
+.totalCost td{
+  font-family: 'Droid Serif', sans-serif, Arial;
+  font-size: 18px;
+  font-weight: 700;
+  height: 80px;
+}
+
+.header{
+  padding-top: 100px;
+  padding-bottom: 70px;
+  padding-left: 15px;
+}
+
+.title {
+  font-family: 'Droid Serif', sans-serif, Arial;
+}
+
+.title h1{
+  font-size: 28px;
+  font-weight: 700;
+  padding-bottom: 15px;
+  text-shadow: 1px 2px #999999;
+}
+
+.title p{
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+#heading{
+  padding: 60px 0 60px 30px;
+}
+
+#content{
+  padding-bottom:150px;
+}
+
+#validationBox{
+  display: none;
+  padding: 0 0 30px 15px;
+  font-size: 15px;
+  font-family: 'Droid Serif', sans-serif, Arial;
+  font-weight: 700;
+  color: #ff3333;
+}
+
+.buttonContainer{
+  margin-top: 20px; 
+}
+
+input.inputQuantity{
+  width: 40px;
+}
+
+tr.summary{
+  height: 35px;
+}
+
+.summaryHeading th:nth-child(3){
+  text-align: left;
+}
+
+.summaryHeading th:nth-child(2){
+  text-align: right;
+}
+
+.summaryHeading th:last-child{
+  border-bottom: 2px solid #999999;
+}
+
+.itemsSummaryContainer tr.row{
+  height: 30px;
+}
+
+.itemsSummaryContainer tr.subTotal{
+  height: 25px;
+}
+
+.itemsSummaryContainer tr.subTotal td{
+  padding-top: 15px;
+}
+
+.itemsSummaryContainer tr.totalCost td{
+  height: 45px;
+}
+
+.itemsSummaryContainer tr.row td.product{
+  width: 230px;
+}
+
+.itemsSummaryContainer tr.row td.quantity{
+  width: 45px;
+}
+
+.itemsSummaryContainer tr.row td.cost{
+  width: 60px;
+}
+
+footer{  
+  background-color: #666666;
+  width: 100%;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:40px;  
+}
+
+footer div.footer{
+  max-width: 960px;
+  margin: 0px auto;
+  width: 50%;
+  height: 100%;
+  padding-left: 30px;
+}
+
+footer div.footer p.footerCopy{
+  font-size: 10px;
+  color: #ffffff;
+  font-family: 'Droid Serif', sans-serif, Arial;
+  font-weight: 400;
+  padding-top: 13px;
+}
+
+
+/* Media Queries */
+@media screen and (min-width: 480px) and  (max-width: 980px) {
+
+  .row td, td.quantity input{
+    font-size: 13px;
+  }
+
+  .row td, .desc th{
+    padding: 0 4px 0 5px  
+  }
+
+  tr.desc, .totalCost td{
+    font-size: 15px;
+  }
+
+  .desc th:first-child {
+    padding-left: 7px;
+  }
+
+  .row td:first-child{
+    padding-left: 7px;
+  }
+
+  input.inputQuantity{
+    width: 27px;
+  }
+
+  header.header{
+    padding: 50px 0 55px 7px;
+  }
+
+  #heading{
+    padding-left: 7px;
+    padding-bottom: 45px;
+  }
+
+  .layout{
+    width: 65%;
+  }
+
+  .title h1{
+    font-size: 25px;
+  }
+
+  .title p{
+    font-size: 12px;
+  }
+
+  tr.emptyRow{
+    height: 20px;
+  }
+
+  .buttonContainer{
+    margin-top: 0px;
+  }
+
+   .row td{
+    line-height: 18px;
+  }
+
+  table.itemsSummaryContainer{
+    width: 70%;
+  }
+
+  footer div.footer{
+    padding-left: 15px;
+    width: 65%;
+  }
+
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+
+  #content{
+    padding-bottom: 120px;
+  }
+
+  .layout{
+    width: 80%;
+  }
+
+  .row td{
+    line-height: 18px;
+  }
+
+  tr.row{
+    height: 60px;
+  }
+
+ .row td, td.quantity input{
+    font-size: 12px;
+  }
+
+  .row td, .desc th{
+    padding: 0 2px 0 3px;
+  }
+
+  tr.desc, .totalCost td{
+    font-size: 14px;
+  }
+
+  .desc th:first-child {
+    padding-left: 4px;
+  }
+
+  .row td:first-child{
+    padding-left: 4px;
+  }
+
+  input.inputQuantity{
+    width: 23px;
+  }
+
+  .header{
+    padding: 50px 0 55px 4px;
+  }
+
+  #heading{
+    padding-left: 4px;
+    padding-bottom: 40px;
+  }
+
+  .title h1{
+    font-size: 23px;
+  }
+
+  .title p{
+    font-size: 12px;
+  }
+
+  tr.emptyRow{
+    height: 20px;
+  }
+
+  tr.subTotal, tr.vat{
+    height: 20px;
+  }
+
+  .buttonContainer{
+    margin-top: 0px;
+  }
+
+  table.itemsSummaryContainer{
+    width: 90%;
+  }
+
+  footer div.footer{
+    width: 80%;
+    padding-left: 8px;
+  }
+
+}
